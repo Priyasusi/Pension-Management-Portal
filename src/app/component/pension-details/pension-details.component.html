@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card text-center">
+            <div class="card-header ">
+                <h3>Pension Management Portal</h3>
+                <h4>Pension Details</h4>
+            </div>
+            <div class="card-body" *ngIf="!invalidPensionDetails; else invalidAadhaarNumber">
+                <h5>Pension Amount : {{pensionAmount}} </h5>
+                <h5>Bank Service Charge : {{bankServiceCharge}}</h5>
+                <button type="submit" class="button" (click)="OnClickingBack()">Back to Calculate Pension
+                    Details</button>
+                <h5>Or</h5>
+                <button type="submit" class="button" (click)="onLogout()">Logout</button>
+            </div>
+            <ng-template #invalidAadhaarNumber>Invalid Pensioner Detail provided. Please provide valid detail.</ng-template>
+        </div>
+    </div>
+</div>

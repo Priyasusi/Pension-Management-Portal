@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('assets/pension-background.webp');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header h3 {
+color: white;
+align-content: center;
+}
+
+.card-header h4 {
+    color: white;
+    align-content: center;
+    }
+
+
+
+.input-group-prepend span{
+width: 30px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+}
+
+.button{
+    color: black;
+        background-color: #FFC312;
+        width: auto;
+}
+
+.button:hover{
+    color: black;
+    background-color: white;
+}

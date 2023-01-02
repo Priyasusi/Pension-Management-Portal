@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Pension Management Portal</h3>
+                <h4>Calculate Pension Details</h4>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="calculatePension" (ngSubmit)="onCalculatePension()">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-id-card"></i></span>
+                            <input type="text" class="form-control" id="aadhaarNumber"
+                                placeholder="Enter Aadhaar Number" name="aadhaarNumber" formControlName="aadhaarNumber">
+                        </div>
+                        <span class="help-block"
+                            *ngIf="!calculatePension.get('aadhaarNumber').valid && calculatePension.get('aadhaarNumber').touched">Please
+                            enter a valid aadhaar number.</span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="button" [disabled]="!calculatePension.valid">Calculate
+                            Pension Details</button>
+                        <span class="help-block" *ngIf="invalidAadhaarNumber">Invalid Pensioner Detail provided.<br>Please
+                            provide valid detail. </span>
+
+                    </div>
+                </form>
+            </div>
+        </div>
